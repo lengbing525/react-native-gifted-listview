@@ -207,6 +207,11 @@ var GiftedListView = React.createClass({
   _refresh() {
     this._onRefresh({external: true});
   },
+  
+  //添加滚动到顶部方法
+  scrollTo() {
+    this.refs.listview.scrollTo({y:-1});
+  },
 
   _onRefresh(options = {}) {
     if (this.isMounted()) {
